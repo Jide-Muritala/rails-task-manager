@@ -2,9 +2,13 @@
 
 <ul>
   <% @tasks.each do |task| %>
-      <li>
-        <%= check_box_tag 'task_completed[]', task.completed %>
-        <%= h task.title %>
-      </li>
+    <li>
+      <% if task.completed? %>
+        <i class="fa-regular fa-check-square"></i>
+      <% else %>
+        <i class="fa-regular fa-square"></i>
+      <% end %>
+      <%= task.title %>
+    </li>
   <% end %>
 </ul>
