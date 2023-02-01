@@ -8,7 +8,9 @@
       <% else %>
         <i class="fa-regular fa-square"></i>
       <% end %>
-      <%= task.title %>
+      <%= link_to task.title, task_path(task.id) %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Add a new task", new_task_path %>
