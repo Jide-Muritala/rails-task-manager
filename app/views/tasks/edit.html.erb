@@ -1,12 +1,6 @@
 <h1>Edit task</h1>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
+<%= render "form", task: @task %>
 
 #Completed
 
