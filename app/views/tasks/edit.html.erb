@@ -1,4 +1,4 @@
-<hi>New task</hi>
+<h1>Edit task</h1>
 
 <%= form_with model: @task do |f| %>
   <%= f.label :title %>
@@ -7,5 +7,7 @@
   <%= f.text_field :details %>
   <%= f.submit %>
 <% end %>
+
+#Completed
 
 <%= link_to "Back to list", tasks_path %>
