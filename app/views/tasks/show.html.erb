@@ -12,3 +12,8 @@
 
   <li><%= link_to "Back to list", tasks_path %></li>
 </ul>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
